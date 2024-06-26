@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://seeklogo.com/images/B/bola-copa-brasil-2014-logo-2E974327EF-seeklogo.com.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://images2.imgbox.com/78/d0/dZy9Eqdl_o.png" type="image/x-icon">
     <title>FUT TV</title>
     <meta property="og:title" content="Fut TV- Futebol ao Vivo">
     <meta name="keywords" content="Futebol ao vivo, Transmissão de jogos, Futebol online, Ver futebol online, Jogos ao vivo, Partidas de futebol, Assistir futebol">
@@ -12,10 +12,10 @@
 <body>
    <header>
       <div class="logo">
-          <img src="https://seeklogo.com/images/B/bola-copa-brasil-2014-logo-2E974327EF-seeklogo.com.png" alt="FUT TV">
+          <img src="https://images2.imgbox.com/78/d0/dZy9Eqdl_o.png" alt="FUT TV">
       </div>
       <nav>
-          <ul>
+          <ul class="lef">
               <li><a href="#home">Início</a></li>
               <li><a href="https://futtv.github.io/FUTTV_AOVIVO/dmca.html">DMCA</a></li>
               <li><a href="https://t.me/FutebolaoVivo07">Telegram</a></li>
@@ -102,20 +102,27 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 17px;
+          padding: 3px;
           background-color: #333;
           color: white;
           width: 100%; /* Faz o cabeçalho ocupar 100% da largura da página */
           box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+          position: relative; /* Necessário para o degradê */
       }
 
       .logo img {
-          height: 50px;
+          height: 80px;
+          margin-left: 20px;
+          
+      }
+      .lef{
+        margin-right: 10px;
       }
 
       nav ul {
           list-style: none;
           display: flex;
+          justify-content: center; /* Centraliza os itens da lista horizontalmente */
       }
 
       nav ul li {
@@ -130,8 +137,19 @@
       }
 
       nav ul li a:hover {
-          color: #ddd;
+          color: green; /* Altera a cor para verde quando o mouse passa sobre o link */
       }
+
+      /* Degradê na parte de baixo do cabeçalho 
+      header::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 20px;
+          background: linear-gradient(to bottom, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
+      }*/
     </style>
       <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
 <!-- Histats.com  START  (aync)-->
