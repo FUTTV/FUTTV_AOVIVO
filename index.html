@@ -109,6 +109,9 @@
           box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
           position: relative; /* Necessário para o degradê */
       }
+      img{
+        border-radius: 4px;
+      }
 
       .logo img {
           height: 80px;
@@ -132,12 +135,15 @@
       nav ul li a {
           color: white;
           text-decoration: none;
-          font-size: 16px;
+          font-size: 18px;
           transition: color 0.3s;
       }
 
       nav ul li a:hover {
-          color: green; /* Altera a cor para verde quando o mouse passa sobre o link */
+          background-color: rgba(12, 231, 12, 0.925);
+          border-radius: 5px;
+          padding: 8px;
+          color: white;
       }
 
       /* Degradê na parte de baixo do cabeçalho 
