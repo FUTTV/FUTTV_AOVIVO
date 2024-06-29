@@ -8,51 +8,6 @@
     <title>FUT TV</title>
     <meta property="og:title" content="Fut TV- Futebol ao Vivo">
     <meta name="keywords" content="Futebol ao vivo, Transmissão de jogos, Futebol online, Ver futebol online, Jogos ao vivo, Partidas de futebol, Assistir futebol">
-</head>
-<body>
-   <header>
-      <div class="logo">
-          <img src="https://images2.imgbox.com/78/d0/dZy9Eqdl_o.png" alt="FUT TV">
-      </div>
-      <nav>
-          <ul class="lef">
-              <li><a href="#home">Início</a></li>
-              <li><a href="https://futtv.github.io/FUTTV_AOVIVO/dmca.html">DMCA</a></li>
-	      <li><a href="https://www.highrevenuenetwork.com/urmv07rm?key=a4396f2531104ab9f2eafced42a34752">Novidade</a></li>  
-              <li><a href="https://t.me/FutebolaoVivo07">Telegram</a></li>
-          </ul>
-      </nav>
-  </header>
-
-    <div class="container">
-        <div class="grid-container">
-            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal1.html">
-                <img src="https://images2.imgbox.com/72/7d/60ZBFqIX_o.png" alt="" class="responsive-img">
-            </a>
-            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal2.html">
-                <img src="https://images2.imgbox.com/14/1e/WUHvm4xT_o.png" alt="" class="responsive-img">
-            </a>
-            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal3.html">
-                <img src="https://images2.imgbox.com/b4/86/alBsx2GU_o.png" alt="" class="responsive-img">
-            </a>
-            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal4.html">
-               <img src="https://images2.imgbox.com/ca/99/5RW1WWa7_o.png" alt="" class="responsive-img">
-           </a><!--
-           <a href="https://futtv.github.io/FUTTV_AOVIVO/canal5.html">
-            <img src="https://images2.imgbox.com/47/56/bej4mrAG_o.png" alt="" class="responsive-img">
-        </a> 
-        <a href="https://futtv.github.io/FUTTV_AOVIVO/canal6.html">
-         <img src="https://images2.imgbox.com/05/6c/IdXFbaxX_o.png" alt="" class="responsive-img">
-     </a>
-     <a href="https://futtv.github.io/FUTTV_AOVIVO/canal7.html">
-      <img src="https://images2.imgbox.com/71/0a/BUteZf2h_o.png" alt="" class="responsive-img">
-  </a>
-  <a href="https://futtv.github.io/FUTTV_AOVIVO/canal8.html">
-   <img src="https://images2.imgbox.com/7d/c7/AtKkHWdw_o.png" alt="" class="responsive-img">
-</a> -->
-        </div>
-    </div>
-
     <style>
       /* Reset básico para remover margens e padding */
       * {
@@ -147,38 +102,136 @@
           color: white;
       }
 
-      /* Degradê na parte de baixo do cabeçalho 
-      header::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 20px;
-          background: linear-gradient(to bottom, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
-      }*/
+      /* Menu Toggle para dispositivos móveis */
+      .menu-toggle {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+      }
+
+      .menu-toggle div {
+          width: 25px;
+          height: 3px;
+          background-color: white;
+          margin: 5px 0;
+      }
+
+      /* Media query para dispositivos móveis */
+      @media (max-width: 768px) {
+          nav ul {
+              flex-direction: column;
+              display: none;
+              width: 100%;
+              text-align: center;
+              background-color: #333;
+              position: absolute;
+              top: 60px;
+              left: 0;
+          }
+
+          nav ul li {
+              margin: 10px 0;
+          }
+
+          .menu-toggle {
+              display: flex;
+              align-items: center;
+              padding: 10px;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 999;
+          }
+
+          nav ul.active {
+              display: flex;
+          }
+      }
     </style>
-      <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-   _Hasync.push(['Histats.start', '1,4876299,4,124,112,33,00000001']);
-   _Hasync.push(['Histats.fasi', '1']);
-   _Hasync.push(['Histats.track_hits', '']);
-   (function() {
-   var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-   hs.src = ('//s10.histats.com/js15_as.js');
-   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-   })();</script>
-   <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4876299&101" alt="myspace tracker" border="0"></a></noscript>
-   <!-- Histats.com  END  -->
+
+</head>
+<body>
+   <header>
+      <div class="logo">
+          <img src="https://images2.imgbox.com/78/d0/dZy9Eqdl_o.png" alt="FUT TV">
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+      <nav>
+          <ul class="lef" id="menu">
+              <li><a href="#home">Início</a></li>
+              <li><a href="https://futtv.github.io/FUTTV_AOVIVO/dmca.html">DMCA</a></li>
+              <li><a href="https://www.highrevenuenetwork.com/urmv07rm?key=a4396f2531104ab9f2eafced42a34752">Novidade</a></li>  
+              <li><a href="https://t.me/FutebolaoVivo07">Telegram</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <div class="container">
+        <div class="grid-container">
+            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal1.html">
+                <img src="https://images2.imgbox.com/72/7d/60ZBFqIX_o.png" alt="" class="responsive-img">
+            </a>
+            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal2.html">
+                <img src="https://images2.imgbox.com/14/1e/WUHvm4xT_o.png" alt="" class="responsive-img">
+            </a>
+            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal3.html">
+                <img src="https://images2.imgbox.com/b4/86/alBsx2GU_o.png" alt="" class="responsive-img">
+            </a>
+            <a href="https://futtv.github.io/FUTTV_AOVIVO/canal4.html">
+               <img src="https://images2.imgbox.com/ca/99/5RW1WWa7_o.png" alt="" class="responsive-img">
+           </a><!--
+           <a href="https://futtv.github.io/FUTTV_AOVIVO/canal5.html">
+            <img src="https://images2.imgbox.com/47/56/bej4mrAG_o.png" alt="" class="responsive-img">
+        </a> 
+        <a href="https://futtv.github.io/FUTTV_AOVIVO/canal6.html">
+         <img src="https://images2.imgbox.com/05/6c/IdXFbaxX_o.png" alt="" class="responsive-img">
+     </a>
+     <a href="https://futtv.github.io/FUTTV_AOVIVO/canal7.html">
+      <img src="https://images2.imgbox.com/71/0a/BUteZf2h_o.png" alt="" class="responsive-img">
+  </a>
+  <a href="https://futtv.github.io/FUTTV_AOVIVO/canal8.html">
+   <img src="https://images2.imgbox.com/7d/c7/AtKkHWdw_o.png" alt="" class="responsive-img">
+</a> -->
+        </div>
+    </div>
+
+    <!-- Histats.com  (div with counter) -->
+    <div id="histats_counter"></div>
+    <!-- Histats.com  START  (aync)-->
+    <script type="text/javascript">
+      var _Hasync= _Hasync|| [];
+      _Hasync.push(['Histats.start', '1,4876299,4,124,112,33,00000001']);
+      _Hasync.push(['Histats.fasi', '1']);
+      _Hasync.push(['Histats.track_hits', '']);
+      (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+      })();
+    </script>
+    <noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4876299&101" alt="myspace tracker" border="0"></a></noscript>
+    <!-- Histats.com  END  -->
+
+    
+
+    <script type='text/javascript' src='//pl19701811.highrevenuenetwork.com/ce/f4/90/cef490cff17d03c6b4c9799192fc4c8d.js'></script>
+    <script type="text/javascript" src="//www.topcreativeformat.com/001de93830f98ff8f08494f4d2ae7630/invoke.js"></script>
+    <script type="text/javascript" src="//www.topcreativeformat.com/88a07a82b0ecbd069d2c7a871a8ae52f/invoke.js"></script>
 
 
-   
 
+    <script>
+      // JavaScript para o menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    </script>
 </body>
-<script type='text/javascript' src='//pl19701811.highrevenuenetwork.com/ce/f4/90/cef490cff17d03c6b4c9799192fc4c8d.js'></script>
-
-<script type="text/javascript" src="//www.topcreativeformat.com/001de93830f98ff8f08494f4d2ae7630/invoke.js"></script>
-
-<script type="text/javascript" src="//www.topcreativeformat.com/88a07a82b0ecbd069d2c7a871a8ae52f/invoke.js"></script>
 </html>
