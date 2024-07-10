@@ -31,4 +31,40 @@
         src="https://apk.futemais.net/app2/"
     ></iframe>
 </body>
+<script>
+        // Redireciona para o link desejado
+        function redirecionar() {
+            window.location.href = "https://futtv.github.io/FUTTV_AOVIVO/";
+        }
+
+        // Detecta o pressionamento de teclas específicas (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12' || 
+                (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) || 
+                (event.ctrlKey && event.key === 'U')) {
+                redirecionar();
+            }
+        });
+
+        // Detecta tentativas de abrir o menu de contexto (botão direito do mouse)
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            redirecionar();
+        });
+
+        // Detecta abertura das ferramentas de desenvolvedor via outros meios
+        let devtoolsOpened = false;
+        setInterval(function() {
+            const widthThreshold = window.outerWidth - window.innerWidth > 160;
+            const heightThreshold = window.outerHeight - window.innerHeight > 160;
+            if (widthThreshold || heightThreshold) {
+                if (!devtoolsOpened) {
+                    devtoolsOpened = true;
+                    redirecionar();
+                }
+            } else {
+                devtoolsOpened = false;
+            }
+        }, 1000);
+    </script>
 </html>
