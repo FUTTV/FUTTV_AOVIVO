@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,9 +7,7 @@
     <title>CANAL DO FUT TV</title>
 </head>
 <body>
- 
-    <iframe src="https://reidoscanais.eu/embed/?id=premiere3" allow="encrypted-media" allowfullscreen="" frameborder="0" width="100%" height="400"></iframe>
-
+    <iframe src="https://reidoscanais.eu/embed/?id=sportv3" allow="encrypted-media" allowfullscreen="" frameborder="0" width="100%" height="400"></iframe>
     <style>
         body {
             background-color: black;
@@ -16,11 +16,29 @@
             color: white;
         }
     </style>
-</body>
- <script>
+
+    <script>
+        // Salva a URL original
+        const originalURL = "https://futtv.github.io/FUTTV_AOVIVO/";
+        const iframe = document.getElementById('myIframe');
+
+        // Verifica a URL do iframe a cada segundo
+        setInterval(function() {
+            try {
+                const iframeUrl = iframe.contentWindow.location.href;
+
+                // Verifica se a URL do iframe mudou
+                if (iframeUrl !== "https://reidoscanais.eu/embed/?id=premiere4") {
+                    window.location.href = originalURL;
+                }
+            } catch (e) {
+                // Ignora erros de política de mesma origem
+            }
+        }, 1000);
+
         // Redireciona para o link desejado
         function redirecionar() {
-            window.location.href = "https://futtv.github.io/FUTTV_AOVIVO/";
+            window.location.href = originalURL;
         }
 
         // Detecta o pressionamento de teclas específicas (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
@@ -52,7 +70,6 @@
                 devtoolsOpened = false;
             }
         }, 1000);
-
-  
-   
+    </script>
+</body>
 </html>
